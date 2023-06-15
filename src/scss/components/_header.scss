@@ -1,222 +1,202 @@
 .header {
-	z-index: var(--z-header);
-	padding: 22px 0px;
+  z-index: var(--z-header);
+  padding: 22px 0px;
 
-	&.header--absolute {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
+  &.header--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
-	}
+  &.header--other {
+    position: relative;
+    background: var(--primary1);
+    transition: all 0.3s ease;
 
-	&.header--other {
-		position: relative;
-		background: var(--primary1);
-		transition: all 0.3s ease;
+    @include tablet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid var(--primary5);
+    }
 
+    a {
+      color: var(--primary2);
+    }
 
+    .header__left .icons .btn-icon .icon {
+      fill: var(--primary2);
+    }
 
-		@include tablet {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			border-bottom: 1px solid var(--primary5);
-		}
+    .header__left .icons .btn-icon {
+      @include hover {
+        .icon {
+          fill: var(--primary3);
+        }
+      }
+    }
 
-		a {
-			color: var(--primary2);
-		}
+    .burger__line {
+      background: var(--primary2);
+    }
+  }
 
+  &.header--pre--fixed {
+    position: fixed;
+    background: var(--primary1);
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+    a {
+      color: var(--primary2);
+    }
 
+    .header__left .icons .btn-icon .icon {
+      fill: var(--primary2);
+    }
 
-		.header__left .icons .btn-icon .icon {
+    .header__left .icons .btn-icon {
+      @include hover {
+        .icon {
+          fill: var(--primary3);
+        }
+      }
+    }
 
-			fill: var(--primary2);
+    .burger__line {
+      background: var(--primary2);
+    }
+  }
 
+  &.header--fixed {
+    transform: translateY(0%);
+  }
 
-		}
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-		.header__left .icons .btn-icon {
+    a {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: var(--primary1);
 
-			@include hover {
-				.icon {
-					fill: var(--primary3);
-				}
+      @include hover {
+        color: var(--primary3);
+      }
+    }
 
-			}
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
 
-			
-		}
+  &__right {
+    height: 50px;
+    a {
+      display: block;
+      height: 50px;
+      img {
+        width: 136px;
+      }
+    }
+  }
 
-		.burger__line {
-			background: var(--primary2);
-		}
+  &__left {
+    display: flex;
+    align-items: center;
 
-	}
+    .menu {
+      margin-right: 70px;
 
-	&.header--pre--fixed {
-		
-		position: fixed;
-		background: var(--primary1);
-		transform: translateY(-100%);
-		transition: all 0.3s ease;
-		a {
-			color: var(--primary2);
-		}
+      @include tablet {
+        display: none;
+      }
 
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+      }
 
+      ul > li {
+        &.menu-item-active {
+          a {
+            color: var(--primary3);
+          }
+        }
+      }
 
-		.header__left .icons .btn-icon .icon {
+      ul > li > a {
+        &.menu-item-active {
+          color: var(--primary3);
+        }
+      }
+    }
 
-			fill: var(--primary2);
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
 
+      @include tablet {
+        margin-right: 30px;
+      }
 
-		}
+      @include mobile {
+        display: none;
+      }
 
-		.header__left .icons .btn-icon {
+      .btn-icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #d9d9d9;
+        border-radius: 100px;
 
-			@include hover {
-				.icon {
-					fill: var(--primary3);
-				}
+        .icon {
+          fill: var(--primary1);
+        }
 
-			}
+        @include hover {
+          border: 1px solid var(--primary3);
 
-			
-		}
+          .icon {
+            fill: var(--primary3);
+          }
+        }
+      }
 
-		.burger__line {
-			background: var(--primary2);
-		}
-	}
+      .btn-cart {
+        i {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: var(--primary3);
+          border-radius: 100px;
+          top: -4px;
+          right: -4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-	&.header--fixed {
-		transform: translateY(0%);
-	}
-
-	&__content {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		a {
-			font-size: 16px;
-			text-transform: uppercase;
-			color: var(--primary1);
-
-			@include hover {
-				color: var(--primary3);
-			}
-		}
-
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-	}
-
-	&__left {
-		display: flex;
-		align-items: center;
-
-		.menu {
-			margin-right: 70px;
-
-			@include tablet {
-				display: none;
-			}
-
-			ul {
-				display: flex;
-				align-items: center;
-				gap: 70px;
-			}
-
-			ul>li {
-
-				&.menu-item-active {
-
-					a {
-						color: var(--primary3);
-					}
-				}
-			}
-
-			ul>li>a {
-
-				&.menu-item-active {
-					color: var(--primary3);
-				}
-			}
-		}
-
-		.icons {
-			display: flex;
-			align-items: center;
-			gap: 15px;
-
-			@include tablet {
-				margin-right: 30px;
-			}
-
-			@include mobile {
-				display: none;
-			}
-
-			.btn-icon {
-				position: relative;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 50px;
-				height: 50px;
-				border: 1px solid #D9D9D9;
-				border-radius: 100px;
-
-
-
-				.icon {
-					fill: var(--primary1);
-				}
-
-				@include hover {
-					border: 1px solid var(--primary3);
-
-					.icon {
-						fill: var(--primary3);
-					}
-				}
-			}
-
-			.btn-cart {
-				i {
-					position: absolute;
-					width: 20px;
-					height: 20px;
-					background: var(--primary3);
-					border-radius: 100px;
-					top: -4px;
-					right: -4px;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-
-					span {
-						font-family: 'Helvetica';
-						font-size: 12px;
-						line-height: 1;
-						margin-top: -2px;
-						margin-left: -2px;
-						color: var(--primary1);
-					}
-				}
-			}
-		}
-
-	}
-
-
+          span {
+            font-family: "Helvetica";
+            font-size: 12px;
+            line-height: 1;
+            margin-top: -2px;
+            margin-left: -2px;
+            color: var(--primary1);
+          }
+        }
+      }
+    }
+  }
 }

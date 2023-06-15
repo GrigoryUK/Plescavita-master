@@ -1,5 +1,5 @@
-import disableScroll from 'disable-scroll';
-import { isMobile, isTablet, isDesktop } from '../../functions/check-viewport';
+import disableScroll from 'disable-scroll'
+import { isDesktop } from '../../functions/check-viewport'
 class GraphModal {
 	constructor(options) {
 		let defaultOptions = {
@@ -177,7 +177,7 @@ class GraphModal {
 		if (isDesktop()) {
 			disableScroll.off();
 		} else {
-			
+
 			let pagePosition = parseInt(document.body.dataset.position, 10);
 			this.unlockPadding();
 			document.body.style.top = 'auto';
@@ -210,23 +210,28 @@ class GraphModal {
 function modalProfile() {
 	const modal = new GraphModal();
 
-	const container = document.querySelector('.sectionTabs__blocks'); 
+	const containers = document.querySelectorAll('.sectionTabs__blocks');
 
-	if (container) {
-		const blocks = container.querySelectorAll('.item'); 
+	if (containers) {
+    containers.forEach(container => {
+      const blocks = container.querySelectorAll('.item');
+      blocks.forEach(block => {
 
-		blocks.forEach(block => {
+        block.addEventListener('click', el => {
+          const button = block.querySelector('button');
+          button.click();
+        })
 
-			block.addEventListener('click', el => {
-				const button = block.querySelector('button'); 
-				button.click();
-			})
-			
-		})
+      })
+    })
+
+
+
 	}
 	// new GraphModal().open('product1');
 }
 
 export {
-	modalProfile
+  modalProfile
 }
+
