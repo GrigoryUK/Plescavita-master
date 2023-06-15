@@ -1,0 +1,74 @@
+.burger {
+	display: none;
+	width: 30px;
+	height: 30px;
+	position: relative;
+
+	@include tablet {
+		transform: translateX(-3px);
+	}
+
+	&--close {
+		width: 40px;
+		height: 40px;
+
+		@include tablet {
+			transform: translateX(-6px);
+		}
+	
+
+		@include mobile {
+			position: absolute;
+			top: 20px;
+			right: 18px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+	
+  
+	@include tablet {
+	  display: block;
+	}
+  
+	&__line {
+	  width: 30px;
+	  height: 2px;
+	  position: absolute;
+	  background-color: var(--primary1);
+	  left: 50%;
+	  transform: translateX(-50%) translateY(-50%);
+	 
+	  &:first-child {
+		margin-top: -5px;
+	  }
+  
+	  &:last-child {
+		margin-top: 5px;
+	  }
+  
+	  &--close {
+		width: 40px;
+		height: 2px;
+		position: absolute;
+		background-color: var(--primary2);
+		left: 12%;
+		transform: translateX(-50%) translateY(-50%);
+
+		@include mobile {
+			width: 30px;
+		}
+  
+		&:first-child {
+			
+		  transform: rotate(45deg);
+		}
+  
+		&:last-child {
+  
+		  transform: rotate(-45deg);
+		}
+	  }
+	}
+  }
+  

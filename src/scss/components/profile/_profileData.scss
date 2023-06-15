@@ -1,0 +1,33 @@
+.profileData {
+	padding: 30px;
+	padding-bottom: 40px;
+
+	@include mobile {
+		padding: 0;
+	}
+
+	ul>li {
+		@include mb(15px);
+	}
+
+	.checkboxDoneComponent {
+		margin-top: 15px;
+		margin-bottom: 30px;
+
+		@include mobile {
+			margin-top: 20px;
+		}
+		label {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 130%;
+			color: var(--primary7);
+
+			@include mobile {
+				max-width: 270px;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+:root {
+  // base
+  --font-family: "Aeroport", "Helvetica", sans-serif;
+  --content-width: 1720px;
+  --container-offset: 100px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --primary1: #ffffff;
+  --primary2: #1C1C1C;
+  --primary3: #F99D15;
+  --primary4: #F3F3F3;
+  --primary5: #EDEDED;
+  --primary6: #F9F9F9;
+  --primary7: #1B1918;
+
+  // z-index
+  --z-menu: 11; 
+  --z-header: 10; 
+  --z-block-main: 9; 
+  --z-dropdown: 5; 
+  --z-close-modal: 8;
+  --z-slider-buttons: 8;
+}

@@ -1,0 +1,130 @@
+<div class="graph-modal">
+	<div class="graph-modal__container modal-profile" role="dialog" aria-modal="true" data-graph-target="profile">
+		<button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<div class="close">
+				<span></span>
+				<span></span>
+			</div>
+		</button>
+		<div class="graph-modal__content">
+			<div class="tabs tabs-profile" data-tabs="tabs-profile">
+				<ul class="tabs__nav">
+					<li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">Авторизация</button></li>
+					<li><span class="separator">/</span></li>
+					<li class="tabs__nav-item"><button class="tabs__nav-btn" type="button">Регистрация</button></li>
+
+				</ul>
+				<div class="tabs__content">
+					<div class="tabs__panel">
+						<div class="form form-login">
+							<div class="form form-authorization part-1" action="">
+								<div class="title">
+									На указанный номер мы вышлем Вам код СМС подтверждения.
+								</div>
+								<ul>
+									<li>
+										<div class="inputComponent input-authorization">
+											<input type="tel" placeholder="Телефон*">
+										</div>
+									</li>
+								</ul>
+								<button class="buttonComponent active max">Отправить</button>
+							</div>
+							<div class="form form-authorization part-2" action="">
+								<div class="title">
+									На указанный номер мы отправили вам сообщение с кодом для регистрации:
+								</div>
+								<ul>
+									<li>
+										<div class="inputComponent input-authorization">
+											<input type="code" placeholder="Введите код из смс">
+										</div>
+									</li>
+								</ul>
+								<button class="buttonComponent active max">Войти</button>
+							</div>
+						</div>
+					</div>
+					<div class="tabs__panel">
+						<div class="form form-register" action="">
+							<div class="form form-authorization part-1" action="">
+								<ul>
+									<li>
+										<div class="inputComponent input-authorization">
+											<input type="text" name="name" placeholder="Имя">
+										</div>
+									</li>
+									<li>
+										<div class="inputComponent input-authorization">
+											<input type="tel" name="tel" placeholder="Телефон*">
+										</div>
+									</li>
+									<li>
+										<div class="inputComponent input-authorization">
+											<input type="text" name="email"
+												placeholder="E-mail (мы будем присылать только акции)">
+										</div>
+									</li>
+								</ul>
+								<button class="buttonComponent active max">Зарегистрироваться</button>
+							</div>
+							<div class="form form-authorization part-2" action="">
+								<div class="title">
+									На указанный номер мы отправили вам сообщение с кодом для регистрации:
+								</div>
+								<ul>
+									<li>
+										<div class="inputComponent input-authorization">
+											<input type="code" placeholder="Введите код из смс">
+										</div>
+									</li>
+								</ul>
+								<button class="buttonComponent active max">Войти</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="graph-modal__container modal-close" role="dialog" aria-modal="true" data-graph-target="delete-address">
+		<button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<div class="close">
+				<span></span>
+				<span></span>
+			</div>
+		</button>
+		<div class="graph-modal__content">
+			<div class="modal-close-container">
+				<div class="titleComponent">
+					Вы уверены, что хотите удалить адрес?
+				</div>
+				<div class="rowComponent">
+					<button class="js-modal-close buttonComponent inline primary max">Подтвердить</button>
+					<button class="js-modal-close buttonComponent inline primary max">Отмена</button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="graph-modal__container modal-close" role="dialog" aria-modal="true" data-graph-target="delete-product">
+		<button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<div class="close">
+				<span></span>
+				<span></span>
+			</div>
+		</button>
+		<div class="graph-modal__content">
+			<div class="modal-close-container">
+				<div class="titleComponent">
+					Вы уверены, что хотите удалить данную позицию?
+				</div>
+				<div class="rowComponent">
+					<button class="js-modal-close buttonComponent inline primary max">Подтвердить</button>
+					<button class="js-modal-close buttonComponent inline primary max">Отмена</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

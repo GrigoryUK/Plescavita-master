@@ -1,0 +1,288 @@
+.sectionTabs {
+	background: var(--primary4);
+	padding-top: 70px;
+	padding-bottom: 100px;
+
+	@include small-tablet {
+		padding-top: 50px;
+	}
+
+	@include mobile {
+		padding-bottom: 30px;
+	}
+
+	&__block {
+		// transition: all 0.2s ease;
+
+		&.block-hidden {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+		}
+
+		&.block-none {
+			display: none;
+		}
+
+		&.block-active {
+			display: block;
+		}
+	}
+
+	&__title {
+		margin-bottom: 70px;
+		display: flex;
+		justify-content: center;
+
+		@include small-tablet {
+			margin-bottom: 50px;
+		}
+
+		@include mobile {
+			margin-bottom: 40px;
+		}
+
+		h3 {
+			margin: 0;
+			font-weight: 300;
+			font-size: 46px;
+			text-align: center;
+			line-height: 1.6;
+
+			@include small-tablet {
+				font-size: 36px;
+			}
+
+			@include mobile {
+				font-size: 32px;
+				line-height: 1.3;
+				max-width: 260px;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin-bottom: 50px;
+
+		@include tablet {
+			margin-bottom: 40px;
+			overflow-y: auto;
+			padding-bottom: 10px;
+		}
+
+		@include mobile {
+			margin-bottom: 20px;
+			gap: 10px;
+		}
+
+		.button-default {
+			font-size: 18px;
+			background: var(--primary1);
+			padding: 23px 38px 24px 38px;
+			border-radius: 100px;
+
+			@include tablet {
+				padding: 15px 24px 17px 24px;
+			}
+
+			@include mobile {
+				padding: 11.5px 12px;
+				font-size: 16px;
+			}
+
+			@include hover {
+				background: var(--primary3);
+				color: var(--primary1);
+			}
+		}
+
+		.button-default-active {
+			background: var(--primary3);
+			color: var(--primary1);
+		}
+	}
+
+	.title {
+		margin-bottom: 30px;
+
+		@include tablet {
+			margin-bottom: 20px;
+		}
+
+		h4 {
+			margin: 0;
+			font-size: 36px;
+			line-height: 1.6;
+			font-weight: 400;
+
+			@include small-tablet {
+				font-size: 28px;
+			}
+
+			@include mobile {
+				font-size: 24px;
+			}
+		}
+	}
+
+	&__blocks {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 15px;
+		margin-bottom: 50px;
+
+		@include big-desktop {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile {
+			margin-bottom: 40px;
+		}
+
+		.item {
+			max-width: 419px;
+			position: relative;
+			border-radius: 10px;
+			overflow: hidden;
+			background: var(--primary1);
+			cursor: pointer;
+
+			&__image {
+				margin-bottom: 15px;
+				max-height: 302px;
+
+				@include mobile {
+					margin-bottom: 5px;
+				}
+			}
+
+			&__block {
+				padding: 0 20px;
+				padding-bottom: 20px;
+
+				@include mobile {
+					padding: 0 15px 15px 10px;
+				}
+			}
+
+			&__title {
+				font-size: 20px;
+				line-height: 1.1;
+
+				@include mobile {
+					font-size: 16px;
+				}
+			}
+
+			&__weight {
+				margin-bottom: 20px;
+				padding-bottom: 50px;
+
+				@include mobile {
+					margin-bottom: 5px;
+					padding-bottom: 44px;
+				}
+				span {
+					font-family: 'Helvetica';
+					font-weight: 300;
+					font-size: 14px;
+					opacity: 0.4;
+
+					@include mobile {
+						font-size: 12px;
+					}
+
+					&:last-child {
+						margin-left: 0.3em;
+					}
+				}
+			}
+
+			&__row {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				bottom: 20px;
+				padding: 0 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@include mobile {
+					padding: 0 15px 0 10px;
+					bottom: 15px;
+				}
+			}
+
+			&__price {
+				margin-top: -4px;
+
+				@include mobile {
+					margin-top: 0;
+				}
+				span {
+					font-size: 20px;
+
+					@include mobile {
+						font-size: 17px;
+					}
+					
+					&:last-child {
+						margin-left: 0.2em;
+					}
+				}
+			}
+
+			&__button {
+				font-size: 18px;
+				padding: 14px 36px 18px;
+				border-radius: 100px;
+				border: 1px solid var(--primary3);
+
+				@include mobile {
+					padding: 0;
+					border-radius: 0;
+					border: none;
+				}
+
+				@include hover {
+					background: var(--primary3);
+					color: var(--primary1);
+				}
+				&--desk {
+					@include mobile {
+						display: none;
+					}
+				}
+
+				&--mobile {
+					display: none;
+
+					svg {
+						width: 44px;
+						height: 44px;
+					}
+
+					@include mobile {
+						display: block;
+					}
+				}
+			}
+
+			@include hover {
+
+				.item__button {
+					color: var(--primary1);
+					background: var(--primary3);
+				}
+			}
+		}
+	}
+}

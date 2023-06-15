@@ -1,0 +1,81 @@
+.cartConfirm {
+
+	&__content {
+		padding-top: 190px;
+		max-width: 700px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 auto;
+
+		@include tablet {
+			padding-top: 100px;
+		}
+
+		@include mobile {
+			padding-top: 50px;
+		}
+
+
+
+
+	}
+
+	&__image {
+		max-width: 100px;
+		max-height: 100px;
+		margin-bottom: 50px;
+
+		@include mobile {
+			max-width: 60px;
+			max-height: 60px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		font-family: 'Aeroport';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 160%;
+		margin-bottom: 20px;
+		text-align: center;
+
+		@include mobile {
+			font-size: 24px;
+			line-height: 1.4;
+			margin-bottom: 10px;
+		}
+
+		strong {
+			margin: 0 0.2em;
+			display: inline-block;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 160%;
+		opacity: 0.7;
+		margin-bottom: 50px;
+
+		@include mobile {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__button {
+
+		.buttonComponent {
+			padding: 14px 52px 18px;
+
+			@include mobile {
+				padding: 14px 32px 18px;
+			}
+		}
+	}
+}

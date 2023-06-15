@@ -1,0 +1,43 @@
+.adresses {
+	padding: 15px 30px 40px;
+
+	@include mobile {
+		padding: 0;
+	}
+
+	.border-none {
+		border: none;
+		padding: 0;
+		padding-top: 30px;
+	}
+
+	ul>li {
+		padding: 15px 0;
+		border-bottom: 1px solid var(--primary5);
+	}
+
+	.button {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		span {
+
+			font-family: 'Aeroport';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 100%;
+			color: var(--primary3);
+
+			
+		}
+
+		svg {
+			width: 12px;
+			height: 12px;
+			fill: var(--primary3);
+		}
+	}
+}

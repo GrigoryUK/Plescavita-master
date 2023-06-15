@@ -1,0 +1,400 @@
+.graph-modal {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.graph-modal__container {
+	@include mobile {
+		width: 100%;
+	}
+}
+
+.graph-modal__close {
+	background-image: none;
+	right: 20px;
+	top: 20px;
+	z-index: var(--z-close-modal);
+
+	@include mobile {
+		top: 20px;
+		right: 20px;
+	}
+
+	.close {
+		position: relative;
+		width: 20px;
+		height: 20px;
+
+		@include mobile {
+			width: 30px;
+			height: 30px;
+		}
+
+		span {
+			width: 100%;
+			height: 2px;
+			position: absolute;
+			background-color: #1C1C1C;
+			left: 50%;
+			top: 50%;
+			transition: all 0.2s ease;
+
+
+
+
+			&:first-child {
+
+				transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			}
+
+			&:last-child {
+
+				transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+			}
+		}
+
+		@include hover {
+			span {
+				background: var(--primary3);
+			}
+		}
+	}
+}
+
+.graph-modal__container {
+
+	&.modal-profile {
+		max-width: 500px;
+		padding: 36px 39px 40px;
+
+		@include mobile {
+			width: 100%;
+			padding: 0 15px;
+			padding-top: 70px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			min-height: 100vh;
+			margin: auto;
+			border-radius: 0;
+
+		}
+
+		.tabs-profile {
+
+			.tabs__nav {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				display: flex;
+				align-items: center;
+				gap: 0.2em;
+				margin-bottom: 40px;
+
+			}
+
+			.tabs__panel {
+				position: relative;
+				overflow: hidden;
+			}
+
+
+
+			.tabs__nav-btn {
+				background: none;
+				font-family: 'Aeroport';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 1.4;
+				color: #ACACAC;
+				cursor: pointer;
+				border: none;
+
+				@include hover {
+					color: var(--primary7);
+				}
+
+
+			}
+
+			.tabs__nav-btn--active {
+				color: var(--primary7);
+				text-decoration: underline;
+				text-underline-offset: 6px;
+
+			}
+
+			.separator {
+				font-family: 'Aeroport';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 100%;
+				color: #ACACAC;
+			}
+		}
+	}
+
+	&.modal-product {
+		padding: 0;
+		max-width: 1380px;
+		max-height: 500px;
+		width: 100%;
+		overflow: hidden;
+
+		@include big-desktop {
+			max-width: 1240px;
+		}
+
+		@include mac-desktop {
+			max-width: 1124px;
+		}
+
+		@include tablet {
+			max-width: 620px;
+			max-height: 100%;
+			overflow: auto;
+		}
+
+		@include mobile {
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			min-height: 100vh;
+			margin: auto;
+			border-radius: 0;
+		}
+
+		.graph-modal__content {}
+
+
+	}
+
+	&.modal-close {
+		max-width: 500px;
+		padding: 36px 39px 40px;
+
+		@include mobile {
+			padding: 0 15px;
+			padding-top: 70px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			min-height: 100vh;
+			margin: auto;
+			border-radius: 0;
+
+		}
+	}
+}
+
+.modal-close {
+
+	
+
+	
+	.titleComponent {
+		text-align: center;
+		margin-bottom: 1rem;
+		line-height: 1.4;
+		font-size: 30px;
+
+		@include mobile {
+			font-size: 24px;
+		}
+	}
+	.rowComponent {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.buttonComponent {
+		width: 50%;
+		@include mobile {
+			padding: 14px 0px 18px;
+		}
+	}
+}
+
+.modal-product {
+
+	.item {
+		display: flex;
+		gap: 40px;
+
+		@include big-desktop {
+			gap: 30px;
+		}
+
+		@include tablet {
+			flex-direction: column;
+		}
+
+		@include mobile {
+			gap: 20px;
+		}
+
+		&__image {
+			max-height: 500px;
+
+			@include tablet {
+				max-height: 450px;
+			}
+		}
+
+		&__box {
+			position: relative;
+			padding: 36px 40px 40px 0;
+			max-width: 650px;
+			background: var(--primary1);
+
+			@include big-desktop {
+				padding: 30px;
+				padding-left: 0;
+			}
+
+			@include tablet {
+				padding: 0 30px;
+				padding-bottom: 30px;
+			}
+
+			@include mobile {
+				padding: 0 15px;
+				padding-bottom: 30px;
+			}
+		}
+
+		&__title {
+			font-family: 'Aeroport';
+			font-weight: 300;
+			font-size: 36px;
+			line-height: 140%;
+			color: var(--primary2);
+
+			@include mobile {
+				font-size: 28px;
+			}
+		}
+
+		&__weight {
+			font-family: 'Helvetica';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 15px;
+			line-height: 1;
+			opacity: 0.4;
+			margin-bottom: 20px;
+
+			@include mobile {
+				margin-bottom: 10px;
+			}
+		}
+
+		&__subtitle {
+			font-family: 'Aeroport';
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 160%;
+			color: var(--primary3);
+			margin-bottom: 10px;
+
+		}
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+
+			@include tablet {
+				padding-bottom: 165px;
+			}
+
+			@include mobile {
+				padding-bottom: 50px;
+			}
+
+			p {
+				margin: 0;
+				font-family: 'Helvetica';
+				font-style: normal;
+				font-weight: 300;
+				font-size: 15px;
+				line-height: 160%;
+
+				@include mobile {
+					font-size: 14px;
+				}
+			}
+		}
+
+		&__row {
+			position: absolute;
+			left: 0;
+			bottom: 40px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-right: 40px;
+
+			@include big-desktop {
+				bottom: 30px;
+				padding-right: 30px;
+			}
+
+			@include tablet {
+				padding: 0 30px;
+			}
+
+			@include mobile {
+				bottom: auto;
+				position: relative;
+				padding: 0;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 20px;
+			}
+
+			&--box {
+				display: flex;
+				align-items: center;
+				gap: 30px;
+
+				@include mobile {
+					width: 100%;
+					justify-content: space-between;
+					gap: 20px;
+				}
+			}
+		}
+
+		&__price {
+			font-size: 22px;
+			line-height: 160%;
+
+			@include mobile {
+				font-size: 20px;
+				
+			}
+		}
+
+		&__button {
+			@include mobile {
+				width: 100%;
+			}
+			.buttonComponent {
+
+				@include mobile {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+
+}
