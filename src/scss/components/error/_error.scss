@@ -1,0 +1,56 @@
+.pageError {
+  min-height: calc(100vh - var(--h-header-desk) - var(--h-footer-desk));
+  @include tablet {
+    min-height: auto;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__main {
+    padding-top: 50px;
+    max-width: 700px;
+
+    @include big-desktop {
+      padding-bottom: 50px;
+    }
+
+    @include tablet {
+      padding: 0;
+      margin-top: 50px;
+      margin-bottom: 150px;
+    }
+
+    svg {
+      margin-bottom: 66px;
+      max-width: 700px;
+
+      @include mobile {
+        margin-bottom: 50px;
+      }
+    }
+
+    .textC {
+      margin-bottom: 40px;
+      p {
+        margin: 0;
+        font-family: "Helvetica", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 140%;
+      }
+
+      p + p {
+        margin-top: 1em;
+      }
+    }
+
+    .buttonComponent {
+      display: block;
+      max-width: 183px;
+    }
+  }
+}
